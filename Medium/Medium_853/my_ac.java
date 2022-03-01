@@ -16,8 +16,7 @@ public class my_ac {
             int ans = 1;
             Node[] nodes = new Node[position.length];
             for (int i = 0; i < nodes.length; i++) {
-                nodes[i].pos = position[i];
-                nodes[i].time = (target-position[i])/speed[i];
+                nodes[i] = new Node(position[i],(double) (target-position[i])/speed[i]);
             }
             Arrays.sort(nodes,new Comparator<Node>() {
                 @Override
@@ -41,9 +40,9 @@ public class my_ac {
     }
     class Node{
         int pos;
-        int time;
+        double time;
 
-        public Node(int pos, int time) {
+        public Node(int pos, double time) {
             this.pos = pos;
             this.time = time;
         }
