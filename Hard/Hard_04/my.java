@@ -9,7 +9,7 @@ package Hard.Hard_04;
  */
 public class my {
 }
-class Solution {
+class Solution1 {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         double ans = 0;
         int s = nums1.length+nums2.length;
