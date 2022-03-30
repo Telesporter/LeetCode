@@ -16,9 +16,9 @@ class Solution {
         if (start == -2 || end == -2){  //只要有一个边界没找到，就无结果
             return new int[]{-1,-1};
         }
-        if (end-start > 1){
+        if (end-start > 1){  //找到边界，边界相邻，表示target不在数组中
             return new int[]{start+1, end-1};
-        }else{
+        }else{  //找到边界，target在数组中
             return new int[]{-1,-1};
         }
     }
